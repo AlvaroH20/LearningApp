@@ -1,32 +1,14 @@
 <div class="container" >
     <div class="card my-5" >
         <div class="card-header" class="p-3 mb-2 bg-primary text-white">
-            <h2>{{course.name}} - {{course.id}}</h2>
+            <clase [clase]="course"></clase>
         </div>
         <div class="card-body">
             <div class="p-3 mb-2 bg-info-subtle text-info-emphasis">
-                <h2>ESTUDIANTES</h2>
+                <app-subtitulo></app-subtitulo>
             </div>
             <div class="my-4">
-                <table class="table table-striped">
-                    <thead >
-                        <th>ID</th>
-                        <th>IDENTIFICACION</th>
-                        <th>NOMBRE</th>
-                        <th>APELLIDO</th>
-                    </thead>
-                    <tbody>
-                        @for (item of course.students; track $index) {
-                        <tr>
-                            <td>{{item.id}}</td>
-                            <td>{{item.identification}}</td>
-                            <td>{{item.name}}</td>
-                            <td>{{item.surname}}</td>
-                        </tr>
-                        }
-
-                    </tbody>
-                </table>
+                <app-estudiantes [estudiantes]="course.students"></app-estudiantes>
             </div>
         </div>
     </div>

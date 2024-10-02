@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../../model/Course';
 import { CourseService } from '../../services/course.service';
+import { SubtituloComponent } from "../subtitulo/subtitulo.component";
+import { ClaseComponent } from "../clase/clase.component";
+import { EstudiantesComponent } from "../estudiantes/estudiantes.component";
 
 @Component({
   selector: 'app-learning',
   standalone: true,
-  imports: [],
+  imports: [SubtituloComponent, ClaseComponent, EstudiantesComponent],
   templateUrl: './learning.component.html',
 })
 export class LearningComponent implements OnInit{
